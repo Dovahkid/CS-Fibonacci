@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnFib = new System.Windows.Forms.Button();
             this.lblFib = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
@@ -132,6 +133,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNum);
             this.Controls.Add(this.btnFib);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Fibonacci Sequence";
             this.statusStrip1.ResumeLayout(false);
