@@ -32,7 +32,7 @@
             this.btnFib = new System.Windows.Forms.Button();
             this.lblFib = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNum = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,13 +66,13 @@
             this.txtNum.Size = new System.Drawing.Size(100, 20);
             this.txtNum.TabIndex = 2;
             // 
-            // label1
+            // lblNum
             // 
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 56);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "How many numbers do you want to generate?\r\n\r\n\r\n";
+            this.lblNum.Location = new System.Drawing.Point(12, 11);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(100, 56);
+            this.lblNum.TabIndex = 3;
+            this.lblNum.Text = "How many numbers do you want to generate?\r\n\r\n\r\n";
             // 
             // statusStrip1
             // 
@@ -108,6 +108,7 @@
             this.radSingle.TabIndex = 6;
             this.radSingle.Text = "Single";
             this.radSingle.UseVisualStyleBackColor = true;
+            this.radSingle.CheckedChanged += new System.EventHandler(this.radSingle_CheckedChanged);
             // 
             // radSeries
             // 
@@ -120,6 +121,7 @@
             this.radSeries.TabStop = true;
             this.radSeries.Text = "Series";
             this.radSeries.UseVisualStyleBackColor = true;
+            this.radSeries.CheckedChanged += new System.EventHandler(this.radSeries_CheckedChanged);
             // 
             // Form1
             // 
@@ -130,7 +132,7 @@
             this.Controls.Add(this.radSingle);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNum);
             this.Controls.Add(this.txtNum);
             this.Controls.Add(this.btnFib);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,7 +151,7 @@
         private System.Windows.Forms.Button btnFib;
         private System.Windows.Forms.Label lblFib;
         private System.Windows.Forms.TextBox txtNum;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.GroupBox groupBox1;

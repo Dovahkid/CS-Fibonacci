@@ -20,23 +20,23 @@ namespace FibGUI
         public double fibo(int n)
         {
             double dblPhi = 0;
-            double dblTemp = 0;
-            string strTemp = "";
-            int subTemp = 0;
-            int tempNum = 0;
+            double dblFibAprox = 0;
+            string strFibAprox = "";
+            int subOfDec = 0;
+            int intIndexOfDec = 0;
             double answer = 0;
 
             try
             {
                 dblPhi = (1 + Math.Pow(5, .5)) / 2;
 
-                dblTemp = (Math.Pow(dblPhi, n)) / (Math.Pow(5, .5));
-                strTemp = Convert.ToString(dblTemp);
+                dblFibAprox = (Math.Pow(dblPhi, n)) / (Math.Pow(5, .5));
 
-                subTemp = strTemp.IndexOf(".");
-                tempNum = Convert.ToInt32(strTemp.Substring(subTemp + 1, 1));
+                strFibAprox = Convert.ToString(dblFibAprox);
+                subOfDec = strFibAprox.IndexOf(".");
+                intIndexOfDec = Convert.ToInt32(strFibAprox.Substring(subOfDec + 1, 1));
 
-                answer = tempNum > 5 ? Math.Ceiling(dblTemp) : Math.Floor(dblTemp);
+                answer = intIndexOfDec > 5 ? Math.Ceiling(dblFibAprox) : Math.Floor(dblFibAprox);
                 
                 return answer;
             }
@@ -76,5 +76,14 @@ namespace FibGUI
 
         }
 
+        private void radSeries_CheckedChanged(object sender, EventArgs e)
+        {
+            lblNum.Text = "How many numbers do you want to generate?";
+        }
+
+        private void radSingle_CheckedChanged(object sender, EventArgs e)
+        {
+            lblNum.Text = "What numbers, n, do you want to find?";
+        }
     }
 }
