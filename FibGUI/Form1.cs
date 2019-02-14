@@ -61,13 +61,20 @@ namespace FibGUI
 
             string answers = string.Empty;
 
-            for (int i = 0; i <= length; i++)
+            if (radSeries.Checked == true)
             {
-                answers += fibo(i) + ", ";
+                for (int i = 0; i <= length; i++)
+                {
+                    answers += fibo(i) + ", ";
+                }
             }
-
+            else
+            {
+                answers += fibo(length);
+            }
             lblFib.Text = answers;
 
         }
+
     }
 }

@@ -35,6 +35,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radSingle = new System.Windows.Forms.RadioButton();
+            this.radSeries = new System.Windows.Forms.RadioButton();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,11 +98,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sequence";
             // 
+            // radSingle
+            // 
+            this.radSingle.AutoSize = true;
+            this.radSingle.Location = new System.Drawing.Point(224, 47);
+            this.radSingle.Name = "radSingle";
+            this.radSingle.Size = new System.Drawing.Size(54, 17);
+            this.radSingle.TabIndex = 6;
+            this.radSingle.Text = "Single";
+            this.radSingle.UseVisualStyleBackColor = true;
+            // 
+            // radSeries
+            // 
+            this.radSeries.AutoSize = true;
+            this.radSeries.Checked = true;
+            this.radSeries.Location = new System.Drawing.Point(224, 14);
+            this.radSeries.Name = "radSeries";
+            this.radSeries.Size = new System.Drawing.Size(54, 17);
+            this.radSeries.TabIndex = 7;
+            this.radSeries.TabStop = true;
+            this.radSeries.Text = "Series";
+            this.radSeries.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 289);
+            this.Controls.Add(this.radSeries);
+            this.Controls.Add(this.radSingle);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
@@ -125,6 +151,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radSingle;
+        private System.Windows.Forms.RadioButton radSeries;
     }
 }
 
